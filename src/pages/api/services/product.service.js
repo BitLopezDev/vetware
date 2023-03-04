@@ -12,6 +12,7 @@ class ProductService  {
 
     async create({data}) {
         try {
+           // const newProduct = await
             //create
         } catch(err) {
             throw new Error(err.toString());
@@ -19,6 +20,33 @@ class ProductService  {
             return data;
         }
             
+
+    }
+
+    async findMany({query}){
+
+        const options = {
+            include: ['category'],
+            ...query
+        };
+
+        
+
+
+    }
+
+    async findOne(id, ...other) {
+        //const product = find the product
+        if(!product){
+            //error
+        }
+    }
+
+    async update (id, {changes}){
+        //code
+    }
+
+    async delete(id, user_id, ...props) {
 
     }
 
@@ -33,7 +61,9 @@ class ProductService  {
             //create
 
     }
-    
+
 
 
 }
+
+module.export = ProductService;
